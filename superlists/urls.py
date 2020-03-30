@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from superlists.lists import views as listviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', listviews.home_page, name="home"),
 ]
